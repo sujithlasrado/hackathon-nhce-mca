@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-white font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  
+  .glass-strong {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  .neon-border-purple {
+    border: 2px solid transparent;
+    background: linear-gradient(#1e293b, #1e293b) padding-box,
+                linear-gradient(135deg, #8b5cf6, #06b6d4) border-box;
+  }
+
+  .neon-border-cyan {
+    border: 2px solid transparent;
+    background: linear-gradient(#1e293b, #1e293b) padding-box,
+                linear-gradient(135deg, #06b6d4, #8b5cf6) border-box;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyber-purple to-cyber-cyan bg-clip-text text-transparent;
+  }
+}
